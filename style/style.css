@@ -36,6 +36,231 @@ p {
   background-color: #1f2235;
 }
 
-h1 {
-  color: white;
+.nav_text {
+  font-family: "Outfit", monospace;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+.nav_text:hover {
+  color: #fe461c;
+}
+
+.buttom_text {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #fe461c;
+  border-radius: 4px;
+  border: 2px solid #fe461c;
+  width: 152px;
+  height: 50px;
+}
+
+.title_hero {
+  background-color: #1f2235;
+}
+
+.hero_smal_text {
+  color: #ffffff;
+  font-family: "Public Sans", monospace;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.hero_text {
+  font-family: "Outfit", sans-serif;
+  color: #ffffff;
+  font-size: 64px;
+  font-weight: 600;
+}
+.hero_text samp {
+  color: #fe461c;
+}
+
+.hero_text_down {
+  color: #ffffff;
+  font-family: "Public Sans", monospace;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.button_hire {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #fe461c;
+  border-radius: 4px;
+  border: 2px solid #fe461c;
+  width: 160px;
+  height: 50px;
+}
+
+.button_cv {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  width: 150px;
+  height: 50px;
+  border-radius: 4px;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.title_contacts {
+  background-color: #24263b;
+}
+
+.button_title {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: #24263b;
+  border: 2px solid #24263b;
+  -webkit-box-shadow: 0 5px 10px rgba(1, 1, 1, 0.2);
+          box-shadow: 0 5px 10px rgba(1, 1, 1, 0.2);
+  color: #ffffff;
+  letter-spacing: 2px;
+  width: 115px;
+  height: 36px;
+}
+
+.title_contacts_text {
+  font-family: "Public Sans", monospace;
+  font-size: 16px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.title_contacts_hero {
+  font-family: "Outfit", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.contact_text {
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact_accent {
+  font-family: "Public Sans", monospace;
+  font-size: 16px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.button_contact {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #fe461c;
+  border-radius: 4px;
+  border: 2px solid #fe461c;
+  width: 160px;
+  height: 56px;
+}
+
+.title_portfolio {
+  background-color: #1f2235;
+}
+
+.hero_portfolio {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Outfit", sans-serif;
+}
+
+.portfolio_text {
+  color: #ffffff;
+  font-family: "Montserrat", monospace;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.img_text {
+  color: #ffffff;
+  font-family: "Montserrat", monospace;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.img_paragraf {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.title_work {
+  background-color: #24263b;
+}
+
+.button_work {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: #24263b;
+  border: 2px solid #24263b;
+  -webkit-box-shadow: 0 5px 10px rgba(1, 1, 1, 0.2);
+          box-shadow: 0 5px 10px rgba(1, 1, 1, 0.2);
+  color: #ffffff;
+  letter-spacing: 2px;
+  width: 172px;
+  height: 36px;
+}
+
+.hero_work {
+  font-family: "Outfit", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.card_serwis {
+  background-color: #1f2235;
+}
+
+.hero_card {
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card_text {
+  color: #ffffff;
+  font-family: "Public Sans", monospace;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.buttom_arow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 5px 5px;
+}
+.buttom_arow img {
+  background-color: #24263b;
+  border-radius: 50%;
+  padding: 15px 15px;
+  margin-right: 10px;
+  border: 3px solid #24263b;
 }/*# sourceMappingURL=style.css.map */

@@ -26,10 +26,197 @@ p {
   margin: 0 auto;
   padding: 0 24px;
 }
-
+$orang: #fe461c;
+$white: #ffffff;
+$bagraond: #24263b;
+$bagraond_two: #1f2235;
+@mixin batton_clik {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: $white;
+  background-color: $orang;
+  border-radius: 4px;
+  border: 2px solid $orang;
+}
+@mixin bag_button {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: $bagraond;
+  border: 2px solid $bagraond;
+  box-shadow: 0 5px 10px rgba(1, 1, 1, 0.2);
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+// header
 .title_nav {
   background-color: #1f2235;
 }
-h1 {
-  color: #ffff;
+.nav_text {
+  font-family: 'Outfit', monospace;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  &:hover {
+    color: $orang;
+  }
+}
+.buttom_text {
+  @include batton_clik;
+  width: 152px;
+  height: 50px;
+}
+//title_hero
+.title_hero {
+  background-color: #1f2235;
+}
+.hero_smal_text {
+  color: $white;
+  font-family: 'Public Sans', monospace;
+  font-size: 16px;
+  font-weight: 900;
+}
+.hero_text {
+  font-family: 'Outfit', sans-serif;
+  color: $white;
+  font-size: 64px;
+  font-weight: 600;
+  samp {
+    color: $orang;
+  }
+}
+.hero_text_down {
+  color: $white;
+  font-family: 'Public Sans', monospace;
+  font-size: 16px;
+  font-weight: 500;
+}
+.button_hire {
+  @include batton_clik;
+  width: 160px;
+  height: 50px;
+}
+.button_cv {
+  background-color: transparent;
+  border: 2px solid $white;
+  width: 150px;
+  height: 50px;
+  border-radius: 4px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: $white;
+}
+//title_contacts
+.title_contacts {
+  background-color: $bagraond;
+}
+.button_title {
+  @include bag_button;
+  width: 115px;
+  height: 36px;
+}
+.title_contacts_text {
+  font-family: 'Public Sans', monospace;
+  font-size: 16px;
+  font-weight: 300;
+  color: $white;
+}
+.title_contacts_hero {
+  font-family: 'Outfit', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: $white;
+}
+.contact_text {
+  color: $white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.contact_accent {
+  font-family: 'Public Sans', monospace;
+  font-size: 16px;
+  font-weight: 300;
+  color: $white;
+}
+.button_contact {
+  @include batton_clik;
+  width: 160px;
+  height: 56px;
+}
+//title_portfolio
+.title_portfolio {
+  background-color: $bagraond_two;
+}
+.hero_portfolio {
+  color: $white;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+}
+.portfolio_text {
+  color: $white;
+  font-family: 'Montserrat', monospace;
+  font-size: 16px;
+  font-weight: 600;
+}
+.img_text {
+  color: $white;
+  font-family: 'Montserrat', monospace;
+  font-size: 24px;
+  font-weight: 600;
+}
+.img_paragraf {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+//title_work
+.title_work {
+  background-color: $bagraond;
+}
+.button_work {
+  @include bag_button;
+  width: 172px;
+  height: 36px;
+}
+.hero_work {
+  font-family: 'Outfit', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: $white;
+}
+.card_serwis {
+  background-color: $bagraond_two;
+}
+.hero_card {
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.card_text {
+  color: #ffffff;
+  font-family: 'Public Sans', monospace;
+  font-size: 16px;
+  font-weight: 300;
+}
+.buttom_arow {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 5px 5px;
+  img {
+    background-color: $bagraond;
+    border-radius: 50%;
+    padding: 15px 15px;
+    margin-right: 10px;
+    border: 3px solid $bagraond;
+  }
 }
