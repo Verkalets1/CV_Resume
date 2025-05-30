@@ -1,74 +1,7 @@
-a {
-  text-decoration: none;
-}
-ul {
-  list-style-type: none;
-}
-a:hover {
-  cursor: pointer;
-}
-* {
-  padding: 0px;
-  margin: 0px;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
-}
-.container {
-  width: 100%;
-  max-width: 1418px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-$orang: #fe461c;
-$white: #ffffff;
-$bagraond: #24263b;
-$bagraond_two: #1f2235;
-@mixin batton_clik {
-  font-family: 'Outfit', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: $white;
-  background-color: $orang;
-  border-radius: 4px;
-  border: 2px solid $orang;
-}
-@mixin bag_button {
-  font-family: 'Outfit', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 4px;
-  background-color: $bagraond;
-  border: 2px solid $bagraond;
-  box-shadow: 0 5px 10px rgba(1, 1, 1, 0.2);
-  color: #ffffff;
-  letter-spacing: 2px;
-}
-@mixin button_icon {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  background: transparent;
-  border: none;
-  background-color: $bagraond;
-  border-radius: 50%;
-  padding: 15px 15px;
-  border: 3px solid $bagraond;
-  box-shadow: 0 5px 10px rgba(1, 1, 1, 0.2);
-  img {
-    height: 60%;
-    width: 60%;
-    object-fit: contain;
-    padding: 7px;
-  }
-}
+@use 'baza' as vars;
+@use 'variables';
+@use '_mixins';
+
 // header
 
 .title_nav {
@@ -76,7 +9,7 @@ $bagraond_two: #1f2235;
 }
 .nav_text {
   font-family: 'Outfit', monospace;
-  color: #ffffff;
+  color: $orang;
   font-size: 16px;
   font-weight: 700;
   &:hover {
@@ -646,6 +579,7 @@ $bagraond_two: #1f2235;
   width: 1169px;
   height: 550px;
   margin-bottom: 120px;
+  border-radius: 8px;
 }
 .hero_title_all_data {
   display: flex;
@@ -702,6 +636,9 @@ $bagraond_two: #1f2235;
   border: none;
   outline: none;
   background-color: transparent;
+  resize: none;
+  width: 620px;
+  height: 180px;
 }
 .blank_message {
   height: 210px;
@@ -778,5 +715,121 @@ footer {
     padding-top: 35px;
     display: flex;
     justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .header_flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav_flex_link {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .buttom_text {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .hero_text_flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .hero_colum {
+      margin-bottom: 20px;
+    }
+
+    .hero_text {
+      font-size: 24px;
+    }
+
+    .button_as_cv {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .contact_flex {
+    flex-direction: column;
+    gap: 20px;
+
+    .contacts_colum_flex {
+      width: 100%;
+    }
+
+    .contact_blokk {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  .foto_flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .portfolio_text_flex {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .work_card {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .title_skill_flex {
+    flex-direction: column;
+    align-items: center;
+
+    .frame_b {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .coments_colum {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .table_blog_flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .search_box {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+
+    .from_subtitle {
+      flex-direction: column;
+      gap: 10px;
+
+      .email_but {
+        width: 100%;
+      }
+    }
+  }
+
+  .all_data_block_flex {
+    flex-direction: column;
+    gap: 20px;
   }
 }

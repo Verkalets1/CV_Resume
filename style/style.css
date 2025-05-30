@@ -899,6 +899,7 @@ p {
   width: 1169px;
   height: 550px;
   margin-bottom: 120px;
+  border-radius: 8px;
 }
 
 .hero_title_all_data {
@@ -1014,6 +1015,9 @@ p {
   border: none;
   outline: none;
   background-color: transparent;
+  resize: none;
+  width: 620px;
+  height: 180px;
 }
 
 .blank_message {

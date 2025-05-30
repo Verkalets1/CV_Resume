@@ -1,0 +1,39 @@
+@mixin batton_clik {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: $white;
+  background-color: $orang;
+  border-radius: 4px;
+  border: 2px solid $orang;
+}
+@mixin bag_button {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: $bagraond;
+  border: 2px solid $bagraond;
+  box-shadow: 0 5px 10px rgba(1, 1, 1, 0.2);
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+@mixin button_icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  background-color: $bagraond;
+  border-radius: 50%;
+  padding: 15px 15px;
+  border: 3px solid $bagraond;
+  box-shadow: 0 5px 10px rgba(1, 1, 1, 0.2);
+  img {
+    height: 60%;
+    width: 60%;
+    object-fit: contain;
+    padding: 7px;
+  }
+}
