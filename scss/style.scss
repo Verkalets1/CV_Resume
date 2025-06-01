@@ -1,23 +1,24 @@
-@use 'baza' as vars;
-@use 'variables';
-@use '_mixins';
-
+@use './fails/baza';
+@use './fails/mixins' as m;
+@use './fails/variables' as v;
 // header
-
+body {
+  background-color: #1f2235;
+}
 .title_nav {
   background-color: #1f2235;
 }
 .nav_text {
   font-family: 'Outfit', monospace;
-  color: $orang;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   &:hover {
-    color: $orang;
+    color: v.$orang;
   }
 }
 .buttom_text {
-  @include batton_clik;
+  @include m.batton_clik;
   width: 152px;
   height: 50px;
 }
@@ -48,16 +49,16 @@
 }
 .hero_text_flex {
   display: flex;
-  img {
-    padding-top: 170px;
-    padding-bottom: 24px;
-  }
+}
+.logo_fece_whe {
+  padding-top: 170px;
+  padding-bottom: 24px;
 }
 .title_hero {
   background-color: #1f2235;
 }
 .hero_smal_text {
-  color: $white;
+  color: v.$white;
   font-family: 'Public Sans', monospace;
   font-size: 16px;
   font-weight: 900;
@@ -65,18 +66,18 @@
 }
 .hero_text {
   font-family: 'Outfit', sans-serif;
-  color: $white;
+  color: v.$white;
   font-size: 64px;
   font-weight: 600;
   line-height: 1.3;
   margin-right: -77px;
   margin-bottom: 31px;
   samp {
-    color: $orang;
+    color: v.$orang;
   }
 }
 .hero_text_down {
-  color: $white;
+  color: v.$white;
   font-family: 'Public Sans', monospace;
   font-size: 16px;
   font-weight: 500;
@@ -84,20 +85,20 @@
   margin-bottom: 36px;
 }
 .button_hire {
-  @include batton_clik;
+  @include m.batton_clik;
   width: 160px;
   height: 50px;
 }
 .button_cv {
   background-color: transparent;
-  border: 2px solid $white;
+  border: 2px solid v.$white;
   width: 150px;
   height: 50px;
   border-radius: 4px;
   font-family: 'Outfit', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: $white;
+  color: v.$white;
 }
 //title_contacts
 .contact_blokk {
@@ -117,16 +118,16 @@
 .contact_flex {
   display: flex;
   gap: 59px;
-  img {
-    padding-top: 270px;
-    padding-bottom: 33px;
-  }
+}
+.frame_img {
+  padding-top: 270px;
+  padding-bottom: 33px;
 }
 .title_contacts {
-  background-color: $bagraond;
+  background-color: v.$bagraond;
 }
 .button_title {
-  @include bag_button;
+  @include m.bag_button;
   width: 115px;
   height: 36px;
   margin-bottom: 19px;
@@ -136,18 +137,18 @@
   font-family: 'Public Sans', monospace;
   font-size: 16px;
   font-weight: 300;
-  color: $white;
+  color: v.$white;
   margin-bottom: 20px;
 }
 .title_contacts_hero {
   font-family: 'Outfit', sans-serif;
   font-size: 36px;
   font-weight: 600;
-  color: $white;
+  color: v.$white;
   margin-bottom: 15px;
 }
 .contact_text {
-  color: $white;
+  color: v.$white;
   font-family: 'Outfit', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -156,10 +157,10 @@
   font-family: 'Public Sans', monospace;
   font-size: 16px;
   font-weight: 300;
-  color: $white;
+  color: v.$white;
 }
 .button_contact {
-  @include batton_clik;
+  @include m.batton_clik;
   width: 160px;
   height: 56px;
 }
@@ -195,23 +196,23 @@
   padding-bottom: 36px;
 }
 .title_portfolio {
-  background-color: $bagraond_two;
+  background-color: v.$bagraond_two;
 }
 .hero_portfolio {
-  color: $white;
+  color: v.$white;
   font-size: 36px;
   font-weight: 700;
   font-family: 'Outfit', sans-serif;
   margin-bottom: 54px;
 }
 .portfolio_text {
-  color: $white;
+  color: v.$white;
   font-family: 'Montserrat', monospace;
   font-size: 16px;
   font-weight: 600;
 }
 .img_text {
-  color: $white;
+  color: v.$white;
   font-family: 'Montserrat', monospace;
   font-size: 24px;
   font-weight: 600;
@@ -236,10 +237,10 @@
   padding-bottom: 120px;
 }
 .title_work {
-  background-color: $bagraond;
+  background-color: v.$bagraond;
 }
 .button_work {
-  @include bag_button;
+  @include m.bag_button;
   width: 172px;
   height: 36px;
   margin-top: 120px;
@@ -249,10 +250,10 @@
   font-family: 'Outfit', sans-serif;
   font-size: 36px;
   font-weight: 700;
-  color: $white;
+  color: v.$white;
 }
 .card_serwis {
-  background-color: $bagraond_two;
+  background-color: v.$bagraond_two;
   border-radius: 8px;
   padding: 41px 39px;
   width: 253px;
@@ -282,13 +283,13 @@
   border: none;
 
   img {
-    background-color: $bagraond;
+    background-color: v.$bagraond;
     border-radius: 50%;
     padding: 12px 12px;
-    border: 3px solid $bagraond;
+    border: 3px solid v.$bagraond;
     box-shadow: 0 5px 10px rgba(1, 1, 1, 0.2);
     &:hover {
-      background-color: $orang;
+      background-color: v.$orang;
     }
   }
 }
@@ -321,54 +322,54 @@
   padding-bottom: 123px;
 }
 .title_skill {
-  background-color: $bagraond_two;
+  background-color: v.$bagraond_two;
 }
 .button_skill {
-  @include bag_button;
+  @include m.bag_button;
   width: 97px;
   height: 36px;
   margin-top: 120px;
   margin-bottom: 16px;
 }
 .hero_skill {
-  color: $white;
+  color: v.$white;
   font-family: 'Outfit', sans-serif;
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 47px;
 }
 .buttom_design {
-  @include bag_button;
+  @include m.bag_button;
   width: 90px;
   height: 36px;
   &:hover {
-    background-color: $orang;
+    background-color: v.$orang;
   }
 }
 .buttom_experience {
-  @include bag_button;
+  @include m.bag_button;
   width: 121px;
   height: 36px;
   &:hover {
-    background-color: $orang;
+    background-color: v.$orang;
   }
 }
 .buttom_education {
-  @include bag_button;
+  @include m.bag_button;
   width: 113px;
   height: 36px;
   &:hover {
-    background-color: $orang;
+    background-color: v.$orang;
   }
 }
 .skill_text {
-  color: $white;
+  color: v.$white;
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
   font-size: 20px;
 }
 .skill_numer {
-  color: $white;
+  color: v.$white;
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -390,7 +391,7 @@
 .coments_line {
   border: none;
   height: 1px;
-  background-color: $white;
+  background-color: v.$white;
   width: 240px;
   margin-bottom: 15px;
 }
@@ -400,34 +401,34 @@
   padding-bottom: 120px;
 }
 .title_coments {
-  background-color: $bagraond;
+  background-color: v.$bagraond;
 }
 .buttom_testimonial {
-  @include bag_button;
+  @include m.bag_button;
   width: 161px;
   height: 36px;
 }
 .subtitle_coments {
-  color: $white;
+  color: v.$white;
   font-family: 'Outfit', sans-serif;
   font-size: 36px;
   font-weight: 700;
 }
 .coments_subtitle {
-  color: $white;
+  color: v.$white;
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
   font-size: 24px;
 }
 .coments_table_text {
-  color: $white;
+  color: v.$white;
   font-family: 'Public Sans', monospace;
   font-size: 16px;
   font-weight: 300;
   margin-bottom: 14px;
 }
 .coments_text {
-  color: $white;
+  color: v.$white;
   font-family: 'Public Sans', monospace;
   font-size: 16px;
   font-weight: 400;
@@ -438,7 +439,7 @@
   padding: 29px 45px;
   width: 337px;
   height: 171px;
-  background-color: $bagraond_two;
+  background-color: v.$bagraond_two;
   margin-bottom: 45px;
 }
 .table_coments:after {
@@ -449,7 +450,7 @@
   width: 0;
   height: 0;
   border-right: 80px solid transparent;
-  border-top: 50px solid $bagraond_two;
+  border-top: 50px solid v.$bagraond_two;
 }
 //title_blog
 .comit_flex {
@@ -479,34 +480,34 @@
   flex-direction: column;
 }
 .title_blog {
-  background-color: $bagraond_two;
+  background-color: v.$bagraond_two;
 }
 .button_blog {
-  @include bag_button;
+  @include m.bag_button;
   width: 133px;
   height: 36px;
 }
 .hero_blog {
-  color: $white;
+  color: v.$white;
   font-family: 'Outfit', sans-serif;
   font-size: 36px;
   font-weight: 700;
 }
 .blog_comit {
-  color: $white;
+  color: v.$white;
   font-family: 'Public Sans', monospace;
   font-size: 16px;
   font-weight: 500;
 }
 .subtitle_blog {
-  color: $white;
+  color: v.$white;
   font-family: 'Outfit', sans-serif;
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 .blog_text {
-  color: $white;
+  color: v.$white;
   font-family: 'Public Sans', monospace;
   font-size: 16px;
   font-weight: 300;
@@ -519,7 +520,7 @@
 .search_box {
   border-radius: 8px;
   padding: 130px 80px;
-  background-color: $bagraond_two;
+  background-color: v.$bagraond_two;
   display: flex;
   align-items: center;
   gap: 161px;
@@ -535,16 +536,16 @@
   font-size: 16px;
   font-weight: 700;
   padding: 23px 53px;
-  color: $white;
-  background-color: $orang;
+  color: v.$white;
+  background-color: v.$orang;
   border-radius: 80px;
-  border: 2px solid $orang;
+  border: 2px solid v.$orang;
 }
 .from_subtitle {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $white;
+  background-color: v.$white;
   border-radius: 80px;
   padding: 20px;
   padding-right: 0;
@@ -552,24 +553,24 @@
   width: 530px;
 }
 .title_search {
-  background-color: $bagraond;
+  background-color: v.$bagraond;
 }
 .Subscribe_Now {
-  color: $white;
+  color: v.$white;
   font-family: 'Public Sans', monospace;
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 9px;
 }
 .subtitle_search {
-  color: $white;
+  color: v.$white;
   font-family: 'Outfit', sans-serif;
   font-size: 55px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 .search_text {
-  color: $white;
+  color: v.$white;
   font-family: 'Public Sans', monospace;
   font-size: 18px;
   font-weight: 400;
@@ -590,12 +591,12 @@
   align-items: center;
 }
 .button_all_blog {
-  @include batton_clik;
+  @include m.batton_clik;
   width: 220px;
   height: 56px;
 }
 .subtitle_text_all_blog {
-  color: $white;
+  color: v.$white;
   font-family: 'Outfit', sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -618,11 +619,11 @@
   align-items: center;
   gap: 18px;
   padding: 24px;
-  background-color: $bagraond;
+  background-color: v.$bagraond;
   max-width: 360px;
 }
 .icon_button {
-  @include button_icon;
+  @include m.button_icon;
 }
 .balank_flex {
   display: flex;
@@ -643,14 +644,14 @@
 .blank_message {
   height: 210px;
   width: 700px;
-  background-color: $bagraond;
+  background-color: v.$bagraond;
   padding: 15px 15px;
   border: 1px solid rgba($color: #ffffff, $alpha: 0.2);
   border-radius: 8px;
   margin-bottom: 40px;
 }
 .blank_email {
-  background-color: $bagraond;
+  background-color: v.$bagraond;
   padding: 16px 29px;
   border: 1px solid rgba($color: #ffffff, $alpha: 0.2);
   border-radius: 8px;
@@ -664,7 +665,7 @@
   background-color: transparent;
 }
 .balank_name {
-  background-color: $bagraond;
+  background-color: v.$bagraond;
   padding: 16px 29px;
   border: 1px solid rgba($color: #ffffff, $alpha: 0.2);
   border-radius: 8px;
@@ -678,38 +679,38 @@
   background-color: transparent;
 }
 .title_all_data {
-  background-color: $bagraond_two;
+  background-color: v.$bagraond_two;
 }
 .buttom_all {
-  @include bag_button;
+  @include m.bag_button;
   width: 133px;
   height: 36px;
 }
 .all_hero {
-  color: $white;
+  color: v.$white;
   font-family: 'Outfit', sans-serif;
   font-size: 36px;
   font-weight: 700;
 }
 .subtitle_contact {
-  color: $white;
+  color: v.$white;
   font-family: 'Outfit', sans-serif;
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 8px;
 }
 .link_adress {
-  color: $white;
+  color: v.$white;
   font-family: 'Public Sans', monospace;
   font-size: 16px;
   font-weight: 300;
 }
 footer {
-  background-color: $bagraond;
+  background-color: v.$bagraond;
   p {
     font-family: 'Outfit', sans-serif;
     font-size: 16px;
-    color: $white;
+    color: v.$white;
     font-weight: 400;
     padding-bottom: 35px;
     padding-top: 35px;
@@ -718,118 +719,212 @@ footer {
   }
 }
 @media (max-width: 480px) {
-  body {
-    font-size: 14px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .container {
-    padding: 0 15px;
-  }
-
-  .header_flex {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .nav_flex_link {
     flex-direction: column;
-    gap: 10px;
-    padding-left: 0;
+  }
+  .hero_text {
+    font-size: 35px;
+  }
+  .logo_fece_whe {
+    padding-top: 60px;
+    width: 350px;
+    height: auto;
+  }
+  .hero_colum {
+    padding-top: 60px;
+  }
+  .skill_blok {
+    padding-bottom: 0;
   }
 
-  .buttom_text {
-    width: 100%;
-    margin-top: 10px;
+  .frame_b,
+  .logo_fece_whe,
+  .frame_img {
+    padding-top: 60px;
   }
-
-  .hero_text_flex {
-    flex-direction: column;
+  .button_sub {
+    padding: 25px 20px;
+  }
+  .contact_accent,
+  .contact_text {
+    font-size: 13px;
+  }
+  .line_img {
+    max-width: 400px;
+  }
+  .portfolio_text_flex {
+    gap: 20px;
+  }
+  .message_in,
+  .from_subtitle {
+    max-width: 300px;
+  }
+  .search_box {
+    padding: 130px 20px;
+  }
+  .from_subtitle {
     align-items: center;
-    text-align: center;
-
-    .hero_colum {
-      margin-bottom: 20px;
-    }
-
-    .hero_text {
-      font-size: 24px;
-    }
-
-    .button_as_cv {
-      flex-direction: column;
-      gap: 10px;
-    }
   }
-
-  .contact_flex {
+  .email_in,
+  .name_in {
+    max-width: 130px;
+  }
+  .maps_b {
+    max-width: 400px;
+    max-height: 400px;
+  }
+  .blank_message {
+    max-width: 378px;
+  }
+  .all_data_block_flex,
+  .search_box,
+  .table_blog_flex,
+  .coments_colum,
+  .title_skill_flex,
+  .work_card,
+  .foto_colum,
+  .title_portfolio_box,
+  .contact_flex,
+  .header_flex,
+  .hero_text_flex {
+    justify-content: center;
     flex-direction: column;
     gap: 20px;
-
-    .contacts_colum_flex {
-      width: 100%;
-    }
-
-    .contact_blokk {
-      flex-direction: column;
-      gap: 15px;
-    }
+    padding-right: 0px;
   }
-
-  .foto_flex {
-    flex-direction: column;
-    gap: 15px;
+  .contact_flex {
+    flex-direction: column-reverse;
   }
-
-  .portfolio_text_flex {
-    flex-wrap: wrap;
-    gap: 10px;
+  .container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .buttom_text {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 481px) and (max-width: 786px) {
+  .container {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .all_data_block_flex,
+  .search_box,
+  .table_blog_flex,
+  .coments_colum,
+  .title_skill_flex,
+  .foto_colum,
+  .contact_flex,
+  .hero_text_flex {
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .button_sub {
+    padding: 24px 53px;
+  }
+  .search_box {
+    padding: 60px;
+    max-width: 600px;
+  }
+  .contact_flex {
+    flex-direction: column-reverse;
+  }
+  .header_flex {
+    justify-content: center;
+    padding-right: 40px;
+    padding-bottom: 10px;
+  }
+  .maps_b {
+    width: 700px;
+    height: 700px;
+  }
+  .frame_img,
+  .title_contacts_text,
+  .logo_fece_whe {
+    width: 720px;
+    height: auto;
+  }
+  .frame_b,
+  .frame_img {
+    padding-top: 70px;
   }
 
   .work_card {
-    flex-direction: column;
-    gap: 20px;
+    display: flex;
+    justify-content: space-between;
   }
-
-  .title_skill_flex {
-    flex-direction: column;
+}
+@media (min-width: 788px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .title_contacts_text {
+    max-width: 600px;
+  }
+  .search_box,
+  .table_blog_flex,
+  .coments_colum,
+  .title_skill_flex,
+  .foto_colum,
+  .contact_flex,
+  .hero_text_flex {
     align-items: center;
-
-    .frame_b {
-      width: 100%;
-      max-width: 300px;
-    }
-  }
-
-  .coments_colum {
+    justify-content: center;
     flex-direction: column;
     gap: 20px;
   }
-
-  .table_blog_flex {
-    flex-direction: column;
-    gap: 20px;
+  .button_sub {
+    padding: 24px 53px;
   }
-
   .search_box {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-
-    .from_subtitle {
-      flex-direction: column;
-      gap: 10px;
-
-      .email_but {
-        width: 100%;
-      }
-    }
+    padding: 60px;
+    max-width: 600px;
+  }
+  .contact_flex {
+    flex-direction: column-reverse;
+  }
+  .header_flex {
+    justify-content: center;
+    padding-right: 40px;
+    padding-bottom: 10px;
+  }
+  .maps_b {
+    width: 980px;
+    height: 600px;
+  }
+  .search_mr {
+    display: flex;
+    justify-content: center;
+  }
+  .frame_b,
+  .frame_img {
+    padding-top: 70px;
   }
 
-  .all_data_block_flex {
-    flex-direction: column;
-    gap: 20px;
+  .work_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+  .blank_message {
+    max-width: 438px;
+  }
+  .message_in {
+    max-width: 400px;
+  }
+  .email_in,
+  .name_in {
+    max-width: 160px;
+  }
+}
+@media (min-width: 1440px) and (max-width: 1960px) {
 }
